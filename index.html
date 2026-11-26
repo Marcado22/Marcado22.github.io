@@ -3,440 +3,737 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Marcos Lozano Marín — Marketing, Web y Redes Sociales</title>
-  <style>
-    :root {
-      --bg: #0b1120;
-      --surface: #111827;
-      --card: #1e293b;
-      --border: rgba(148, 163, 184, 0.18);
-      --text: #f8fafc;
-      --muted: #94a3b8;
-      --accent: #38bdf8;
-      --accent-dark: #0284c7;
-    }
+  <title>Marcos Lozano Marín — Marketing, Ventas, Web &amp; IA</title>
+  <meta
+    name="description"
+    content="Web personal y currículum de Marcos Lozano Marín. Marketing y Publicidad, ventas, diseño web y automatización con IA desde Jaén."
+  />
+  <link rel="icon" href="logo-firma-pincel-ML.jpg" type="image/jpeg" />
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  />
 
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      max-width: 1040px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    /* NAV */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(11, 17, 32, 0.85);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 64px;
-    }
-
-    .logo {
-      font-weight: 800;
-      font-size: 1.05rem;
-      letter-spacing: -0.02em;
-    }
-
-    .logo span {
-      color: var(--accent);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 24px;
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    .nav-links a:hover {
-      color: var(--text);
-    }
-
-    /* HERO */
-    .hero {
-      padding: 84px 0 64px;
-    }
-
-    .badge {
-      display: inline-block;
-      background: rgba(56, 189, 248, 0.12);
-      color: var(--accent);
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      font-size: 0.8rem;
-      font-weight: 600;
-      padding: 6px 12px;
-      border-radius: 999px;
-      margin-bottom: 20px;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.1rem, 5vw, 3.4rem);
-      font-weight: 800;
-      line-height: 1.12;
-      letter-spacing: -0.03em;
-      max-width: 780px;
-    }
-
-    .hero h1 span {
-      color: var(--accent);
-    }
-
-    .hero p {
-      margin-top: 18px;
-      font-size: 1.08rem;
-      color: var(--muted);
-      max-width: 650px;
-    }
-
-    .hero-actions {
-      margin-top: 28px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: #0b1120;
-      font-weight: 700;
-      font-size: 0.92rem;
-      padding: 12px 22px;
-      border-radius: 10px;
-      transition: opacity 0.2s;
-    }
-
-    .btn-primary:hover {
-      opacity: 0.9;
-    }
-
-    .btn-secondary {
-      background: var(--card);
-      color: var(--text);
-      border: 1px solid var(--border);
-      font-weight: 600;
-      font-size: 0.92rem;
-      padding: 12px 22px;
-      border-radius: 10px;
-      transition: border-color 0.2s;
-    }
-
-    .btn-secondary:hover {
-      border-color: var(--accent);
-    }
-
-    /* SECTIONS */
-    section {
-      padding: 56px 0;
-    }
-
-    .section-title {
-      font-size: 1.5rem;
-      font-weight: 800;
-      margin-bottom: 8px;
-    }
-
-    .section-sub {
-      color: var(--muted);
-      font-size: 0.95rem;
-      margin-bottom: 28px;
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 18px;
-    }
-
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 22px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 14px;
-      transition: transform 0.2s, border-color 0.2s;
-    }
-
-    .card:hover {
-      transform: translateY(-3px);
-      border-color: rgba(56, 189, 248, 0.45);
-    }
-
-    .card-tag {
-      font-size: 0.72rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--accent);
-    }
-
-    .card h3 {
-      font-size: 1.15rem;
-      font-weight: 700;
-      margin-top: 4px;
-    }
-
-    .card p {
-      font-size: 0.9rem;
-      color: var(--muted);
-      margin-top: 6px;
-    }
-
-    .card-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      align-items: center;
-    }
-
-    .card-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--accent);
-    }
-
-    .card-link-muted {
-      color: var(--muted);
-    }
-
-    .card-link-muted:hover {
-      color: var(--text);
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 10px;
-    }
-
-    .pill {
-      font-size: 0.78rem;
-      background: var(--card);
-      border: 1px solid var(--border);
-      padding: 4px 10px;
-      border-radius: 8px;
-      color: #cbd5e1;
-    }
-
-    /* ABOUT */
-    .about-box {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 28px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
-    }
-
-    .about-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      font-size: 0.92rem;
-      color: var(--muted);
-    }
-
-    .about-list strong {
-      color: var(--text);
-    }
-
-    /* FOOTER / CONTACT */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 48px 0;
-      text-align: center;
-    }
-
-    footer h2 {
-      font-size: 1.5rem;
-      font-weight: 800;
-    }
-
-    footer p {
-      color: var(--muted);
-      margin: 8px auto 22px;
-      max-width: 520px;
-      font-size: 0.95rem;
-    }
-
-    .contact-info {
-      font-size: 0.9rem;
-      color: var(--muted);
-      margin-top: 18px;
-    }
-
-    @media (max-width: 640px) {
-      .nav-links {
-        display: none;
-      }
-      .hero {
-        padding: 56px 0 40px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <nav>
-    <div class="container nav-inner">
-      <div class="logo">Marcos Lozano<span>.</span></div>
-      <div class="nav-links">
-        <a href="#portfolio">Portfolio</a>
-        <a href="#trabajo">En qué ayudo</a>
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#contacto">Contacto</a>
+  <!-- Barra de progreso de lectura -->
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Cursor personalizado -->
+  <div class="custom-cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+  <div class="custom-cursor-ring" id="cursor-ring" aria-hidden="true"></div>
+
+  <!-- Escena 3D orgánica sutil y atmósfera -->
+  <canvas class="hero-canvas" id="hero-3d-canvas" aria-hidden="true"></canvas>
+  <div class="cursor-aura" id="cursor-aura" aria-hidden="true"></div>
+  <div class="bg-noise" aria-hidden="true"></div>
+  <div class="bg-orb bg-orb--1" aria-hidden="true"></div>
+  <div class="bg-orb bg-orb--2" aria-hidden="true"></div>
+
+  <!-- Navegación -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="#inicio" class="brand" aria-label="Inicio - Marcos Lozano Marín">
+        <span class="brand__logo-wrap">
+          <img src="logo-firma-pincel-ML.jpg" alt="Logotipo Marcos Lozano" class="brand__logo" />
+        </span>
+        <span class="brand__name">Marcos Lozano</span>
+      </a>
+
+      <nav class="nav" id="nav-menu" aria-label="Navegación principal">
+        <a href="#sobre-mi" class="nav__link">Sobre mí</a>
+        <a href="#experiencia" class="nav__link">Experiencia</a>
+        <a href="#formacion" class="nav__link">Formación</a>
+        <a href="#habilidades" class="nav__link">Lo que hago</a>
+        <a href="#contacto" class="nav__link">Contacto</a>
+      </nav>
+
+      <div class="navbar__actions">
+        <button type="button" class="btn btn--ghost btn--sm" id="print-cv-btn" title="Guardar o imprimir CV en 1 hoja PDF">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          <span>Descargar CV</span>
+        </button>
+
+        <button
+          type="button"
+          class="menu-toggle"
+          id="menu-toggle"
+          aria-label="Abrir menú de navegación"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
-  </nav>
+  </header>
 
-  <main class="container">
-    <section class="hero">
-      <div class="badge">Buscando prácticas (FCT) · Marketing y Publicidad</div>
-      <h1>Marketing digital, <span>creación web</span> y apoyo práctico con IA.</h1>
-      <p>
-        Estoy terminando el <strong>Grado Superior en Marketing y Publicidad</strong> y vengo de trabajar cara al público y en venta comercial. Me gusta montar webs claras y rápidas, cuidar el contenido en redes sociales y usar la inteligencia artificial para agilizar el trabajo del día a día.
-      </p>
-      <div class="hero-actions">
-        <a href="#portfolio" class="btn-primary">Ver portfolio</a>
-        <a href="#contacto" class="btn-secondary">Contactar</a>
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="container hero__grid">
+        <div class="hero__content reveal">
+          <p class="hero__kicker">Jaén · Remoto y movilidad según condiciones</p>
+
+          <h1 class="hero__title">
+            Soy <br />
+            <span class="brush-name">
+              Marcos Lozano Marín
+              <svg class="brush-underline" viewBox="0 0 360 22" fill="none" preserveAspectRatio="none" aria-hidden="true">
+                <path
+                  d="M6 15.5C68 7.2 184 4.8 354 11.2"
+                  stroke="url(#brushGrad)"
+                  stroke-width="6.5"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M28 18.8C118 12.5 224 11.4 336 14.8"
+                  stroke="url(#brushGrad)"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  opacity="0.55"
+                />
+                <defs>
+                  <linearGradient id="brushGrad" x1="0" y1="0" x2="360" y2="0" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#f6f2eb" stop-opacity="0.85" />
+                    <stop offset="0.38" stop-color="#a855f7" />
+                    <stop offset="1" stop-color="#e879f9" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </span>
+          </h1>
+
+          <p class="hero__role">
+            Marketing, ventas y
+            <span class="typed-highlight" id="typed-role">automatización con IA</span>
+          </p>
+
+          <p class="hero__bio">
+            Tengo <span id="hero-age">20</span> años, vivo en Jaén y estoy estudiando el Grado Superior de
+            <strong>Marketing y Publicidad</strong>. Me he curtido vendiendo cara a cara, por teléfono y de prácticas
+            en Italia; ahora mezclo esa parte comercial con lo que más me mueve: <strong>redes sociales, páginas web
+            y automatizaciones con IA</strong>.
+          </p>
+
+          <div class="hero__cta">
+            <a href="#contacto" class="btn btn--primary" data-magnetic>
+              <span>Escríbeme</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </a>
+            <a href="#experiencia" class="btn btn--secondary" data-magnetic>Ver mi recorrido</a>
+          </div>
+        </div>
+
+        <!-- Tarjeta de perfil con inclinación 3D -->
+        <div class="profile-stage reveal reveal--delay">
+          <aside class="profile-card" data-tilt aria-label="Resumen personal">
+            <div class="profile-card__header">
+              <div class="avatar avatar--logo">
+                <img src="logo-firma-pincel-ML.jpg" alt="Firma ML de Marcos Lozano" class="avatar__logo" />
+              </div>
+              <div>
+                <h2 class="profile-card__name">Marcos Lozano Marín</h2>
+                <p class="profile-card__subtitle">Marketing · Comercial · Web &amp; IA</p>
+              </div>
+            </div>
+
+            <ul class="profile-card__facts">
+              <li>
+                <span class="fact-label">Edad</span>
+                <span class="fact-value"><span id="age-value">20</span> años (26/08/2006)</span>
+              </li>
+              <li>
+                <span class="fact-label">Vivo en</span>
+                <span class="fact-value">Jaén, España</span>
+              </li>
+              <li>
+                <span class="fact-label">Modalidad</span>
+                <span class="fact-value">Remoto · Movilidad según condiciones</span>
+              </li>
+              <li>
+                <span class="fact-label">Ahora mismo</span>
+                <span class="fact-value">Comercial en Seguros Ocaso</span>
+              </li>
+              <li>
+                <span class="fact-label">Estudiando</span>
+                <span class="fact-value">T.S. Marketing y Publicidad</span>
+              </li>
+              <li>
+                <span class="fact-label">Enfoque</span>
+                <span class="fact-value">Desarrollo web y automatización IA</span>
+              </li>
+            </ul>
+
+            <div class="profile-card__links">
+              <a href="https://www.linkedin.com/in/marcos-lozano-mar%C3%ADn-141235299/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+              <a href="https://www.instagram.com/darkado22/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+              <a href="https://wa.me/34685143271" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
+            </div>
+          </aside>
+        </div>
       </div>
     </section>
 
-    <section id="portfolio">
-      <h2 class="section-title">Portfolio</h2>
-      <p class="section-sub">Por ahora empiezo por mi página web personal; iré añadiendo nuevos trabajos por aquí.</p>
+    <!-- CINTA CONTINUA SUTIL -->
+    <section class="marquee-band" aria-label="Áreas de trabajo">
+      <div class="marquee-track">
+        <div class="marquee-group">
+          <span>Marketing y Publicidad</span>
+          <span class="marquee-sep" aria-hidden="true">/</span>
+          <span>Ventas</span>
+          <span class="marquee-sep" aria-hidden="true">/</span>
+          <span>Páginas Web</span>
+          <span class="marquee-sep" aria-hidden="true">/</span>
+          <span>Automatización con IA</span>
+          <span class="marquee-sep" aria-hidden="true">/</span>
+          <span>Redes Sociales</span>
+          <span class="marquee-sep" aria-hidden="true">/</span>
+          <span>Erasmus+ Italia</span>
+          <span class="marquee-sep" aria-hidden="true">/</span>
+          <span>PeñIA LAB</span>
+          <span class="marquee-sep" aria-hidden="true">/</span>
+          <span>Jugger Jaén</span>
+          <span class="marquee-sep" aria-hidden="true">/</span>
+        </div>
+        <div class="marquee-group" aria-hidden="true">
+          <span>Marketing y Publicidad</span>
+          <span class="marquee-sep">/</span>
+          <span>Ventas</span>
+          <span class="marquee-sep">/</span>
+          <span>Páginas Web</span>
+          <span class="marquee-sep">/</span>
+          <span>Automatización con IA</span>
+          <span class="marquee-sep">/</span>
+          <span>Redes Sociales</span>
+          <span class="marquee-sep">/</span>
+          <span>Erasmus+ Italia</span>
+          <span class="marquee-sep">/</span>
+          <span>PeñIA LAB</span>
+          <span class="marquee-sep">/</span>
+          <span>Jugger Jaén</span>
+          <span class="marquee-sep">/</span>
+        </div>
+      </div>
+    </section>
 
-      <div class="grid-2">
-        <article class="card">
-          <div>
-            <span class="card-tag">Web personal</span>
-            <h3>Mi página web personal (Marcado22.github.io)</h3>
-            <p>
-              Esta misma página está maquetada en HTML y CSS desde cero para presentar quién soy, mi experiencia comercial y cómo trabajo, con carga rápida y diseño adaptado a móvil.
+    <!-- SOBRE MÍ (Humano y directo) -->
+    <section class="section" id="sobre-mi">
+      <div class="container">
+        <div class="about-layout">
+          <div class="about-text reveal">
+            <span class="section__eyebrow">Sobre mí</span>
+            <h2 class="section__title">Me gusta entender a la gente y construir cosas que funcionen.</h2>
+            <p class="about-paragraph">
+              No vengo solo de la teoría: llevo tiempo trabajando cara a cara con clientes en tienda, vendiendo
+              servicios por teléfono y asesorando en seguros. Eso me ha enseñado a escuchar de verdad, aguantar la
+              presión y comunicar sin rodeos.
             </p>
-            <div class="pill-row">
-              <span class="pill">HTML5</span>
-              <span class="pill">CSS3</span>
-              <span class="pill">Responsive</span>
-              <span class="pill">GitHub Pages</span>
+            <p class="about-paragraph">
+              En paralelo, llevo redes sociales, diseño páginas web y me estoy especializando en desarrollo y
+              automatización con IA (en parte gracias a mi paso por <strong>PeñIA LAB</strong>). También dediqué un
+              año como voluntario llevando la escuela deportiva de <strong>Jugger</strong> en La Carolina y
+              representando a la federación jiennense: me gusta implicarme cuando algo merece la pena.
+            </p>
+          </div>
+
+          <div class="about-notes reveal reveal--delay">
+            <article class="card note-card" data-tilt>
+              <span class="note-card__kicker">Calle y ventas</span>
+              <h3>Trato directo con clientes</h3>
+              <p>
+                De tienda física en Linares e Italia a llamadas comerciales en Konecta y venta en Seguros Ocaso.
+                Sé lo que cuesta conseguir un "sí" y cuidar a un cliente.
+              </p>
+            </article>
+
+            <article class="card note-card" data-tilt>
+              <span class="note-card__kicker">Digital e IA</span>
+              <h3>Webs, redes y automatización</h3>
+              <p>
+                Hago páginas web y gestiono redes sociales mientras profundizo cada semana en herramientas y flujos
+                con IA para trabajar más rápido y mejor.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCIA -->
+    <section class="section section--alt" id="experiencia">
+      <div class="container">
+        <div class="section__head section__head--row reveal">
+          <div>
+            <span class="section__eyebrow">Experiencia</span>
+            <h2 class="section__title">Dónde he trabajado y aprendido</h2>
+          </div>
+
+          <div class="filter-bar" role="tablist" aria-label="Filtrar experiencia">
+            <button type="button" class="filter-btn is-active" data-filter="all" role="tab" aria-selected="true">Todo</button>
+            <button type="button" class="filter-btn" data-filter="empleo" role="tab" aria-selected="false">Empleo</button>
+            <button type="button" class="filter-btn" data-filter="practicas" role="tab" aria-selected="false">Prácticas</button>
+            <button type="button" class="filter-btn" data-filter="voluntariado" role="tab" aria-selected="false">Voluntariado</button>
+          </div>
+        </div>
+
+        <div class="timeline" id="experience-list">
+          <!-- Seguros Ocaso -->
+          <article class="timeline__item card reveal" data-category="empleo">
+            <div class="timeline__dot timeline__dot--active" aria-hidden="true"></div>
+            <div class="timeline__meta">
+              <span class="badge badge--cyan">Empleo actual</span>
+              <span class="timeline__date">Junio – Actualidad</span>
+            </div>
+            <h3 class="timeline__title">Comercial de Ventas</h3>
+            <p class="timeline__org">Seguros Ocaso</p>
+            <p class="timeline__desc">
+              Captación de nuevos clientes, asesoramiento personalizado en seguros y seguimiento de cartera. Trabajo
+              diario de calle y trato cercano para cerrar operaciones y mantener la confianza del cliente.
+            </p>
+          </article>
+
+          <!-- Konecta / Legálitas -->
+          <article class="timeline__item card reveal" data-category="empleo">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__meta">
+              <span class="badge badge--muted">Empleo</span>
+              <span class="timeline__date">4 meses</span>
+            </div>
+            <h3 class="timeline__title">Comercial Telefónico</h3>
+            <p class="timeline__org">Konecta · Legálitas Abogados</p>
+            <p class="timeline__desc">
+              Venta telefónica de servicios de asesoramiento jurídico. Mucho ritmo de llamadas, manejo de objeciones
+              en directo y foco constante en cumplir objetivos.
+            </p>
+          </article>
+
+          <!-- Voluntariado Jugger -->
+          <article class="timeline__item card reveal" data-category="voluntariado">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__meta">
+              <span class="badge badge--violet">Voluntariado</span>
+              <span class="timeline__date">Curso 2024 – 2025 · 1 año</span>
+            </div>
+            <h3 class="timeline__title">Monitor de Escuela Deportiva Jugger y Representante Federativo</h3>
+            <p class="timeline__org">Federación Jiennense de Jugger · La Carolina</p>
+            <p class="timeline__desc">
+              Un año entero organizando entrenamientos de Jugger con chavales en La Carolina, dinamizando el grupo y
+              actuando como representante de la Federación Jiennense de Jugger.
+            </p>
+          </article>
+
+          <!-- Erasmus Italia -->
+          <article class="timeline__item card reveal" data-category="practicas">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__meta">
+              <span class="badge badge--cyan">Prácticas · Erasmus+</span>
+              <span class="timeline__date">2 meses</span>
+            </div>
+            <h3 class="timeline__title">Prácticas en Tienda Deportiva</h3>
+            <p class="timeline__org">Puglisi Sport · Barcellona Pozzo di Gotto (Italia)</p>
+            <p class="timeline__desc">
+              Dos meses trabajando fuera de España con beca Erasmus+. Atención al cliente en tienda, organización de
+              material y adaptación a otro país, idioma y forma de trabajar.
+            </p>
+          </article>
+
+          <!-- Tienda N1 Linares -->
+          <article class="timeline__item card reveal" data-category="practicas">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__meta">
+              <span class="badge badge--muted">Prácticas</span>
+              <span class="timeline__date">10 meses</span>
+            </div>
+            <h3 class="timeline__title">Prácticas en Comercio y Atención al Público</h3>
+            <p class="timeline__org">Tienda de ropa N1 · Linares</p>
+            <p class="timeline__desc">
+              Diez meses aprendiendo el día a día real de una tienda: atender clientes, recomendar prendas, controlar
+              stock, reponer y mantener el local a punto.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMACIÓN -->
+    <section class="section" id="formacion">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__eyebrow">Formación</span>
+          <h2 class="section__title">Estudios y cursos</h2>
+        </div>
+
+        <div class="education-grid">
+          <div class="edu-column reveal">
+            <h3 class="edu-column__title">Titulación oficial</h3>
+
+            <article class="card edu-card edu-card--featured">
+              <div class="edu-card__top">
+                <span class="badge badge--cyan">En curso</span>
+                <span class="edu-card__place">Jaén</span>
+              </div>
+              <h4>Técnico Superior en Marketing y Publicidad</h4>
+              <p class="edu-card__school">I.E.S. Fuente de la Peña</p>
+              <p class="edu-card__detail">
+                Marketing digital, publicidad, investigación comercial y estrategia de marca.
+              </p>
+            </article>
+
+            <article class="card edu-card">
+              <div class="edu-card__top">
+                <span class="badge badge--muted">Terminado</span>
+                <span class="edu-card__place">Linares</span>
+              </div>
+              <h4>Técnico de Grado Medio en Actividades Comerciales y Marketing</h4>
+              <p class="edu-card__school">I.E.S. Cástulo</p>
+              <p class="edu-card__detail">
+                Base práctica en ventas, comercio, escaparatismo y atención al cliente.
+              </p>
+            </article>
+          </div>
+
+          <div class="edu-column reveal reveal--delay">
+            <h3 class="edu-column__title">Otros cursos y programas</h3>
+
+            <article class="card edu-card edu-card--ai">
+              <div class="edu-card__top">
+                <span class="badge badge--violet">IA &amp; Creatividad</span>
+              </div>
+              <h4>Programa PeñIA LAB</h4>
+              <p class="edu-card__school">Creatividad, Inteligencia Artificial e Impacto Social</p>
+              <p class="edu-card__detail">
+                El punto de partida que me metió de lleno a experimentar y construir con Inteligencia Artificial.
+              </p>
+            </article>
+
+            <article class="card edu-card">
+              <div class="edu-card__top">
+                <span class="badge badge--muted">Digital</span>
+              </div>
+              <h4>Curso de Gestión de Redes Sociales</h4>
+              <p class="edu-card__school">Planificación, contenido y manejo de cuentas</p>
+            </article>
+
+            <article class="card edu-card">
+              <div class="edu-card__top">
+                <span class="badge badge--muted">Deporte</span>
+              </div>
+              <h4>Curso de Monitor de Ocio y Escuelas Deportivas</h4>
+              <p class="edu-card__school">Gestión de grupos y actividades deportivas</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LO QUE HAGO (Sin barras falsas de porcentaje) -->
+    <section class="section section--alt" id="habilidades">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__eyebrow">Lo que hago</span>
+          <h2 class="section__title">En qué puedo ayudarte hoy</h2>
+          <p class="section__lead">
+            Sin porcentajes inventados: esto es lo que ya he hecho en la práctica y aquello en lo que me estoy
+            especializando ahora mismo.
+          </p>
+        </div>
+
+        <div class="craft-grid">
+          <article class="card craft-card reveal" data-tilt>
+            <span class="craft-card__tag">En especialización activa</span>
+            <h3>Desarrollo Web &amp; Automatización con IA</h3>
+            <p>
+              Diseño y monto páginas web modernas para negocios o marca personal, y estoy profundizando cada día en
+              automatizar tareas y flujos usando herramientas de IA.
+            </p>
+            <div class="craft-card__chips">
+              <span class="chip">Páginas web</span>
+              <span class="chip">Automatización IA</span>
+              <span class="chip">Flujos digitales</span>
+              <span class="chip">IA generativa</span>
+            </div>
+          </article>
+
+          <article class="card craft-card reveal reveal--delay" data-tilt>
+            <span class="craft-card__tag">Formación + práctica</span>
+            <h3>Marketing y Redes Sociales</h3>
+            <p>
+              He trabajado gestionando redes y estudio Marketing y Publicidad. Entiendo tanto la parte creativa del
+              contenido como el objetivo final: que atraiga clientes de verdad.
+            </p>
+            <div class="craft-card__chips">
+              <span class="chip">Redes sociales</span>
+              <span class="chip">Contenido</span>
+              <span class="chip">Publicidad</span>
+              <span class="chip">Marca personal</span>
+            </div>
+          </article>
+
+          <article class="card craft-card reveal reveal--delay-2" data-tilt>
+            <span class="craft-card__tag">Experiencia real</span>
+            <h3>Ventas, Trato Humano y Liderazgo</h3>
+            <p>
+              Sé hablar con clientes por teléfono, en tienda y cara a cara, adaptarme a otro país y coordinar un
+              grupo entero como monitor deportivo.
+            </p>
+            <div class="craft-card__chips">
+              <span class="chip">Venta comercial</span>
+              <span class="chip">Atención al cliente</span>
+              <span class="chip">Liderazgo</span>
+              <span class="chip">Erasmus+</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section" id="contacto">
+      <div class="container">
+        <div class="contact-box card reveal">
+          <div class="contact-box__info">
+            <span class="section__eyebrow">Contacto</span>
+            <h2 class="section__title">Si tienes un proyecto o una oferta, hablemos.</h2>
+            <p class="section__lead">
+              Puedes escribirme por correo, llamarme o mandarme un WhatsApp directo. Vivo en Jaén, trabajo en remoto
+              y estoy abierto a movilidad según las condiciones.
+            </p>
+
+            <div class="contact-links">
+              <div class="contact-item">
+                <span class="contact-item__label">Correo</span>
+                <div class="contact-item__row">
+                  <a href="mailto:marcos33137@gmail.com" class="contact-item__value" id="email-text">
+                    marcos33137@gmail.com
+                  </a>
+                  <button type="button" class="copy-btn" id="copy-email-btn" aria-label="Copiar correo electrónico">
+                    Copiar
+                  </button>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <span class="contact-item__label">Teléfono</span>
+                <div class="contact-item__row">
+                  <a href="tel:+34685143271" class="contact-item__value">
+                    +34 685 14 32 71
+                  </a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <span class="contact-item__label">Ubicación y disponibilidad</span>
+                <span class="contact-item__value">Jaén, España · Remoto y movilidad según condiciones</span>
+              </div>
+
+              <div class="social-row">
+                <a href="https://www.linkedin.com/in/marcos-lozano-mar%C3%ADn-141235299/" class="social-pill" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://www.instagram.com/darkado22/" class="social-pill" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://wa.me/34685143271" class="social-pill" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              </div>
             </div>
           </div>
-          <div class="card-links">
-            <a href="https://marcado22.github.io/" class="card-link">Ver web en vivo →</a>
-            <a href="https://github.com/Marcado22/Marcado22.github.io" class="card-link card-link-muted">Ver código en GitHub →</a>
-          </div>
-        </article>
-      </div>
-    </section>
 
-    <section id="trabajo">
-      <h2 class="section-title">En qué puedo ayudar</h2>
-      <p class="section-sub">Áreas en las que me siento cómodo y donde puedo sumar desde el primer día.</p>
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">Tu nombre</label>
+              <input type="text" id="name" name="name" placeholder="¿Cómo te llamas?" required />
+            </div>
 
-      <div class="grid-3">
-        <article class="card">
-          <div>
-            <span class="card-tag">Contenido y redes</span>
-            <h3>Redes sociales y copywriting</h3>
-            <p>
-              Planificación de publicaciones, redacción de textos cercanos y adaptación de mensajes a públicos jóvenes, especialmente en deporte, gaming y esports.
-            </p>
-          </div>
-        </article>
+            <div class="form-group">
+              <label for="email">Tu correo</label>
+              <input type="email" id="email" name="email" placeholder="tu@correo.com" required />
+            </div>
 
-        <article class="card">
-          <div>
-            <span class="card-tag">IA práctica</span>
-            <h3>Apoyo con Inteligencia Artificial</h3>
-            <p>
-              Uso de herramientas de IA para preparar borradores, ordenar ideas y quitar trabajo repetitivo en tareas de marketing y seguimiento, siempre con revisión humana.
-            </p>
-          </div>
-        </article>
+            <div class="form-group">
+              <label for="message">Mensaje</label>
+              <textarea id="message" name="message" rows="4" placeholder="Cuéntame en qué te puedo echar una mano..." required></textarea>
+            </div>
 
-        <article class="card">
-          <div>
-            <span class="card-tag">PeñIA LAB</span>
-            <h3>Proyectos con IA en equipo</h3>
-            <p>
-              Participación en el programa <strong>PeñIA LAB</strong>, aplicando herramientas de inteligencia artificial a retos creativos y casos reales.
-            </p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="sobre-mi">
-      <h2 class="section-title">Sobre mí</h2>
-      <p class="section-sub">Mi recorrido entre la formación en marketing, las ventas y el deporte.</p>
-
-      <div class="about-box">
-        <ul class="about-list">
-          <li><strong>Formación:</strong> Cursando el Grado Superior en Marketing y Publicidad, tras completar el Técnico en Actividades Comerciales y Marketing.</li>
-          <li><strong>Experiencia comercial:</strong> Venta de seguros en Seguros Ocaso y venta telefónica en Konecta (Legálitas), aprendiendo a escuchar al cliente y defender un producto.</li>
-          <li><strong>Tienda y Erasmus+:</strong> 10 meses trabajando en Tienda N1 (Linares) y prácticas Erasmus+ en Puglisi Sport (Italia).</li>
-        </ul>
-        <ul class="about-list">
-          <li><strong>Parte digital:</strong> Creación de páginas web en HTML y CSS, gestión básica de redes sociales y uso práctico de herramientas de IA.</li>
-          <li><strong>Deporte y equipo:</strong> Monitor de escuela deportiva de Jugger y representante de la Federación Jiennense de Jugger (2024–2025).</li>
-          <li><strong>Prácticas (FCT):</strong> Disponibilidad para prácticas curriculares con convenio del centro educativo y movilidad.</li>
-        </ul>
+            <button type="submit" class="btn btn--primary btn--full">
+              <span>Enviar mensaje</span>
+            </button>
+            <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
+          </form>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer id="contacto">
-    <div class="container">
-      <h2>¿Hablamos?</h2>
-      <p>Busco un equipo de marketing, comunicación o agencia donde hacer mis prácticas y seguir aprendiendo con proyectos reales. Si te encaja mi perfil, escríbeme sin compromiso.</p>
-      <a href="mailto:marcos300137@gmail.com" class="btn-primary">Enviar un correo</a>
-      <div class="contact-info">
-        marcos300137@gmail.com · +34 685 14 32 71 · Jaén / Linares
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="logo-firma-pincel-ML.jpg" alt="ML" class="footer__logo" />
+        <p>© <span id="current-year">2026</span> Marcos Lozano Marín · Jaén</p>
       </div>
+      <a href="#inicio" class="footer__top">Subir ↑</a>
     </div>
   </footer>
+
+  <!-- ======================================================================
+       VERSIÓN DEDICADA DE CURRÍCULUM PARA DESCARGA / IMPRESIÓN (1 HOJA A4)
+       Solo visible al pulsar "Descargar CV" o imprimir (Ctrl+P)
+       ====================================================================== -->
+  <section class="print-cv" aria-hidden="true">
+    <header class="print-cv__header">
+      <div class="print-cv__identity">
+        <h1 class="print-cv__name">Marcos Lozano Marín</h1>
+        <p class="print-cv__role">Marketing y Publicidad · Ventas · Desarrollo Web &amp; Automatización con IA</p>
+        <p class="print-cv__summary">
+          Estudiante de Grado Superior en Marketing y Publicidad con experiencia real en ventas presenciales,
+          telefónicas y comercio internacional (Erasmus+ Italia). Especializándome en diseño de páginas web,
+          redes sociales y automatización con Inteligencia Artificial.
+        </p>
+      </div>
+
+      <div class="print-cv__contact">
+        <div><strong>Tel:</strong> +34 685 14 32 71</div>
+        <div><strong>Email:</strong> marcos33137@gmail.com</div>
+        <div><strong>Ubicación:</strong> Jaén, España</div>
+        <div><strong>Disponibilidad:</strong> Remoto y movilidad según condiciones</div>
+        <div><strong>Nacimiento:</strong> 26/08/2006</div>
+        <div><strong>LinkedIn:</strong> /in/marcos-lozano-marín-141235299</div>
+        <div><strong>Instagram:</strong> @darkado22</div>
+      </div>
+    </header>
+
+    <div class="print-cv__body">
+      <div class="print-cv__main">
+        <div class="print-cv__block">
+          <h2 class="print-cv__heading">Experiencia Laboral</h2>
+
+          <div class="print-cv__item">
+            <div class="print-cv__item-top">
+              <h3>Comercial de Ventas — <span>Seguros Ocaso</span></h3>
+              <span class="print-cv__date">Junio – Actualidad</span>
+            </div>
+            <p>
+              Captación de nuevos clientes, asesoramiento personalizado en seguros y seguimiento de cartera con
+              trato cercano y orientación a objetivos.
+            </p>
+          </div>
+
+          <div class="print-cv__item">
+            <div class="print-cv__item-top">
+              <h3>Comercial Telefónico — <span>Konecta (Legálitas Abogados)</span></h3>
+              <span class="print-cv__date">4 meses</span>
+            </div>
+            <p>
+              Venta telefónica de servicios jurídicos, resolución de objeciones en directo, escucha activa y
+              cumplimiento de objetivos comerciales.
+            </p>
+          </div>
+        </div>
+
+        <div class="print-cv__block">
+          <h2 class="print-cv__heading">Prácticas y Experiencia Internacional</h2>
+
+          <div class="print-cv__item">
+            <div class="print-cv__item-top">
+              <h3>Prácticas Erasmus+ — <span>Puglisi Sport (Barcellona Pozzo di Gotto, Italia)</span></h3>
+              <span class="print-cv__date">2 meses</span>
+            </div>
+            <p>
+              Atención al público en tienda deportiva en Italia, organización de material, trabajo en equipo y
+              adaptación a un entorno laboral internacional.
+            </p>
+          </div>
+
+          <div class="print-cv__item">
+            <div class="print-cv__item-top">
+              <h3>Prácticas en Comercio — <span>Tienda de Ropa N1 (Linares)</span></h3>
+              <span class="print-cv__date">10 meses</span>
+            </div>
+            <p>
+              Atención al cliente, asesoramiento en prendas, control y reposición de stock y apoyo operativo diario
+              en tienda.
+            </p>
+          </div>
+        </div>
+
+        <div class="print-cv__block">
+          <h2 class="print-cv__heading">Voluntariado y Liderazgo</h2>
+
+          <div class="print-cv__item">
+            <div class="print-cv__item-top">
+              <h3>Monitor Escuela Deportiva Jugger y Representante — <span>Fed. Jiennense de Jugger</span></h3>
+              <span class="print-cv__date">2024 – 2025 (1 año)</span>
+            </div>
+            <p>
+              Dirección de entrenamientos juveniles de Jugger en La Carolina, dinamización de grupos y
+              representación de la Federación Jiennense de Jugger.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="print-cv__side">
+        <div class="print-cv__block">
+          <h2 class="print-cv__heading">Formación Académica</h2>
+
+          <div class="print-cv__item">
+            <div class="print-cv__item-top">
+              <h3>T.S. en Marketing y Publicidad</h3>
+              <span class="print-cv__date">En curso</span>
+            </div>
+            <p class="print-cv__sub">I.E.S. Fuente de la Peña (Jaén)</p>
+          </div>
+
+          <div class="print-cv__item">
+            <div class="print-cv__item-top">
+              <h3>T.G.M. Actividades Comerciales y Marketing</h3>
+              <span class="print-cv__date">Terminado</span>
+            </div>
+            <p class="print-cv__sub">I.E.S. Cástulo (Linares)</p>
+          </div>
+        </div>
+
+        <div class="print-cv__block">
+          <h2 class="print-cv__heading">Otros Cursos</h2>
+          <ul class="print-cv__list">
+            <li><strong>Programa PeñIA LAB:</strong> Creatividad, Inteligencia Artificial e Impacto Social.</li>
+            <li><strong>Curso de Gestión de Redes Sociales.</strong></li>
+            <li><strong>Curso de Monitor de Ocio y Escuelas Deportivas.</strong></li>
+          </ul>
+        </div>
+
+        <div class="print-cv__block">
+          <h2 class="print-cv__heading">Habilidades y Enfoque</h2>
+
+          <div class="print-cv__skill-cat">
+            <strong>Web &amp; Automatización IA</strong>
+            <p>Diseño y creación de páginas web, automatización con IA y herramientas digitales.</p>
+          </div>
+
+          <div class="print-cv__skill-cat">
+            <strong>Marketing &amp; Redes</strong>
+            <p>Gestión de redes sociales, contenido digital y comunicación comercial.</p>
+          </div>
+
+          <div class="print-cv__skill-cat">
+            <strong>Comercial &amp; Trato Personal</strong>
+            <p>Venta presencial y telefónica, atención al cliente, liderazgo de grupos y adaptación internacional.</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
