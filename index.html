@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Marcos Lozano Marín — Marketing, Web &amp; Automatización con IA</title>
+  <title>Marcos Lozano Marín — Marketing, Web y Redes Sociales</title>
   <style>
     :root {
       --bg: #0b1120;
@@ -220,6 +220,13 @@
       margin-top: 6px;
     }
 
+    .card-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      align-items: center;
+    }
+
     .card-link {
       display: inline-flex;
       align-items: center;
@@ -227,6 +234,14 @@
       font-size: 0.88rem;
       font-weight: 600;
       color: var(--accent);
+    }
+
+    .card-link-muted {
+      color: var(--muted);
+    }
+
+    .card-link-muted:hover {
+      color: var(--text);
     }
 
     .pill-row {
@@ -309,8 +324,8 @@
     <div class="container nav-inner">
       <div class="logo">Marcos Lozano<span>.</span></div>
       <div class="nav-links">
-        <a href="#proyectos">Proyectos Web</a>
-        <a href="#ia">Automatización IA</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#trabajo">En qué ayudo</a>
         <a href="#sobre-mi">Sobre mí</a>
         <a href="#contacto">Contacto</a>
       </div>
@@ -318,83 +333,66 @@
   </nav>
 
   <main class="container">
-    <!-- HERO -->
     <section class="hero">
-      <div class="badge">Disponible para Prácticas (FCT) · Marketing y Publicidad</div>
-      <h1>Marketing Digital, <span>Creación Web</span> y Automatización con IA.</h1>
+      <div class="badge">Buscando prácticas (FCT) · Marketing y Publicidad</div>
+      <h1>Marketing digital, <span>creación web</span> y apoyo práctico con IA.</h1>
       <p>
-        Soy estudiante de <strong>Grado Superior en Marketing y Publicidad</strong> con experiencia real en ventas, gestión de redes sociales y desarrollo de páginas web. Me apasionan el sector digital, el deporte y los esports.
+        Estoy terminando el <strong>Grado Superior en Marketing y Publicidad</strong> y vengo de trabajar cara al público y en venta comercial. Me gusta montar webs claras y rápidas, cuidar el contenido en redes sociales y usar la inteligencia artificial para agilizar el trabajo del día a día.
       </p>
       <div class="hero-actions">
-        <a href="#proyectos" class="btn-primary">Ver mis proyectos</a>
-        <a href="#contacto" class="btn-secondary">Contactar conmigo</a>
+        <a href="#portfolio" class="btn-primary">Ver portfolio</a>
+        <a href="#contacto" class="btn-secondary">Contactar</a>
       </div>
     </section>
 
-    <!-- PROYECTOS WEB -->
-    <section id="proyectos">
-      <h2 class="section-title">Proyectos Web</h2>
-      <p class="section-sub">Páginas y landing pages desarrolladas en HTML/CSS enfocadas a marca, diseño y conversión.</p>
+    <section id="portfolio">
+      <h2 class="section-title">Portfolio</h2>
+      <p class="section-sub">Por ahora empiezo por mi página web personal; iré añadiendo nuevos trabajos por aquí.</p>
 
       <div class="grid-2">
         <article class="card">
           <div>
-            <span class="card-tag">Web / Landing Page</span>
-            <h3>[Nombre de tu Proyecto Web 1]</h3>
+            <span class="card-tag">Web personal</span>
+            <h3>Mi página web personal (Marcado22.github.io)</h3>
             <p>
-              [Describe en 2 líneas qué es esta web y su objetivo de marketing: por ejemplo, landing page promocional diseñada para captar clientes y mejorar la presencia digital.]
+              Esta misma página está maquetada en HTML y CSS desde cero para presentar quién soy, mi experiencia comercial y cómo trabajo, con carga rápida y diseño adaptado a móvil.
             </p>
             <div class="pill-row">
               <span class="pill">HTML5</span>
               <span class="pill">CSS3</span>
-              <span class="pill">Diseño Responsive</span>
+              <span class="pill">Responsive</span>
+              <span class="pill">GitHub Pages</span>
             </div>
           </div>
-          <!-- Sube tu carpeta proyecto-1 dentro del mismo repo de GitHub -->
-          <a href="./proyecto-1/" class="card-link">Ver web en vivo →</a>
-        </article>
-
-        <article class="card">
-          <div>
-            <span class="card-tag">Web / Proyecto Digital</span>
-            <h3>[Nombre de tu Proyecto Web 2]</h3>
-            <p>
-              [Describe en 2 líneas qué hiciste aquí: por ejemplo, web informativa o escaparate digital con estructura clara orientada al usuario.]
-            </p>
-            <div class="pill-row">
-              <span class="pill">HTML5</span>
-              <span class="pill">UI / UX</span>
-              <span class="pill">Marketing</span>
-            </div>
+          <div class="card-links">
+            <a href="https://marcado22.github.io/" class="card-link">Ver web en vivo →</a>
+            <a href="https://github.com/Marcado22/Marcado22.github.io" class="card-link card-link-muted">Ver código en GitHub →</a>
           </div>
-          <!-- Sube tu carpeta proyecto-2 dentro del mismo repo de GitHub -->
-          <a href="./proyecto-2/" class="card-link">Ver web en vivo →</a>
         </article>
       </div>
     </section>
 
-    <!-- AUTOMATIZACIÓN E IA -->
-    <section id="ia">
-      <h2 class="section-title">Automatización e Inteligencia Artificial</h2>
-      <p class="section-sub">Soluciones prácticas aplicadas al marketing, contenido y productividad comercial.</p>
+    <section id="trabajo">
+      <h2 class="section-title">En qué puedo ayudar</h2>
+      <p class="section-sub">Áreas en las que me siento cómodo y donde puedo sumar desde el primer día.</p>
 
       <div class="grid-3">
         <article class="card">
           <div>
-            <span class="card-tag">IA &amp; Contenido</span>
-            <h3>[Flujo IA para Redes Sociales]</h3>
+            <span class="card-tag">Contenido y redes</span>
+            <h3>Redes sociales y copywriting</h3>
             <p>
-              <strong>Objetivo:</strong> Agilizar la creación de copies, ideas de contenido y calendarios para redes sociales manteniendo el tono de marca.
+              Planificación de publicaciones, redacción de textos cercanos y adaptación de mensajes a públicos jóvenes, especialmente en deporte, gaming y esports.
             </p>
           </div>
         </article>
 
         <article class="card">
           <div>
-            <span class="card-tag">Automatización</span>
-            <h3>[Automatización Comercial / Leads]</h3>
+            <span class="card-tag">IA práctica</span>
+            <h3>Apoyo con Inteligencia Artificial</h3>
             <p>
-              <strong>Objetivo:</strong> Reducir tareas repetitivas en la gestión de contactos y seguimiento comercial mediante flujos automatizados.
+              Uso de herramientas de IA para preparar borradores, ordenar ideas y quitar trabajo repetitivo en tareas de marketing y seguimiento, siempre con revisión humana.
             </p>
           </div>
         </article>
@@ -402,30 +400,29 @@
         <article class="card">
           <div>
             <span class="card-tag">PeñIA LAB</span>
-            <h3>Creatividad, IA e Impacto Social</h3>
+            <h3>Proyectos con IA en equipo</h3>
             <p>
-              Participación en el programa <strong>PeñIA LAB</strong> aplicando herramientas de Inteligencia Artificial a proyectos creativos y reales.
+              Participación en el programa <strong>PeñIA LAB</strong>, aplicando herramientas de inteligencia artificial a retos creativos y casos reales.
             </p>
           </div>
         </article>
       </div>
     </section>
 
-    <!-- SOBRE MÍ -->
     <section id="sobre-mi">
       <h2 class="section-title">Sobre mí</h2>
-      <p class="section-sub">Formación, experiencia comercial y valores deportivos.</p>
+      <p class="section-sub">Mi recorrido entre la formación en marketing, las ventas y el deporte.</p>
 
       <div class="about-box">
         <ul class="about-list">
-          <li><strong>Formación:</strong> Técnico Superior en Marketing y Publicidad (en curso) y Técnico en Actividades Comerciales y Marketing.</li>
-          <li><strong>Experiencia en ventas:</strong> Comercial de Ventas en Seguros Ocaso y Comercial Telefónico en Konecta (Legálitas).</li>
-          <li><strong>Experiencia internacional:</strong> Prácticas Erasmus+ en Puglisi Sport (Italia) y 10 meses en Tienda N1 (Linares).</li>
+          <li><strong>Formación:</strong> Cursando el Grado Superior en Marketing y Publicidad, tras completar el Técnico en Actividades Comerciales y Marketing.</li>
+          <li><strong>Experiencia comercial:</strong> Venta de seguros en Seguros Ocaso y venta telefónica en Konecta (Legálitas), aprendiendo a escuchar al cliente y defender un producto.</li>
+          <li><strong>Tienda y Erasmus+:</strong> 10 meses trabajando en Tienda N1 (Linares) y prácticas Erasmus+ en Puglisi Sport (Italia).</li>
         </ul>
         <ul class="about-list">
-          <li><strong>Especialización:</strong> Gestión de redes sociales, diseño web y automatización con IA.</li>
-          <li><strong>Deporte y liderazgo:</strong> Monitor de escuela deportiva de Jugger y representante de la Federación Jiennense de Jugger (2024–2025).</li>
-          <li><strong>Disponibilidad:</strong> Prácticas curriculares (FCT) con convenio gestionado por el centro educativo.</li>
+          <li><strong>Parte digital:</strong> Creación de páginas web en HTML y CSS, gestión básica de redes sociales y uso práctico de herramientas de IA.</li>
+          <li><strong>Deporte y equipo:</strong> Monitor de escuela deportiva de Jugger y representante de la Federación Jiennense de Jugger (2024–2025).</li>
+          <li><strong>Prácticas (FCT):</strong> Disponibilidad para prácticas curriculares con convenio del centro educativo y movilidad.</li>
         </ul>
       </div>
     </section>
@@ -434,7 +431,7 @@
   <footer id="contacto">
     <div class="container">
       <h2>¿Hablamos?</h2>
-      <p>Estoy buscando un equipo de Marketing y Publicidad donde aportar energía, visión comercial y habilidades digitales en mis prácticas.</p>
+      <p>Busco un equipo de marketing, comunicación o agencia donde hacer mis prácticas y seguir aprendiendo con proyectos reales. Si te encaja mi perfil, escríbeme sin compromiso.</p>
       <a href="mailto:marcos300137@gmail.com" class="btn-primary">Enviar un correo</a>
       <div class="contact-info">
         marcos300137@gmail.com · +34 685 14 32 71 · Jaén / Linares
